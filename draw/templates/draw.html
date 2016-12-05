@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Port 57 XMAS LIGHTS!!</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+
+      #sketch {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="sketch"></canvas>
+    <script src="/static/polyfill.js"></script>
+    <script src="/static/rcolor.js"></script>
+    <script src="/static/fadecandy.js"></script>
+    <script>
+      var canvas = document.getElementById('sketch')
+          , ctx = canvas.getContext('2d');
+
+      canvas.width = canvas.clientWidth;
+      canvas.height = canvas.clientHeight;
+
+      // 10.0.57.25
+      var FC = new FadeCandy(canvas, "10.0.57.25:8080", "{{ token }}");
+    </script>
+  </body>
+</html>
